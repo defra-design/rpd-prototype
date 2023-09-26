@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Primary navigation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block header %}
+
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Report packaging data",
+    serviceUrl: "/",
+    classes: "govuk-header__container--full-width",
+    containerClasses: "govuk-width-container",
+    navigationClasses: "sign-out",
+    navigation: [{
+      href: "#",
+      text: "Sign out"
+    }]
+    })
+  }}
+  
+  {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    html: 'This is not a live service.',
+    classes: "govuk-width-container"
+  }) }}
+  
+{% endblock %}
+
+
+{% block main %}
+
+  {{ xGovukPrimaryNavigation({
+    visuallyHiddenTitle: "Site navigation",
+    items: 
+    [{
+      text: "Overview",
+      href: "./overview",
+      current: true
+    }, {
+      text: "Organisation details",
+      href: "./organisation-details"
+    }, {
+      text: "Packaging data",
+      href: "#"
+    }]
+  }) }}
+
+
+
+  
+
+  <div class="govuk-width-container">
+    <!-- {{ govukBackLink({
+      href: "javascript:window.history.back()"
+    }) }} -->
+
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds govuk-!-margin-top-2">
+          <h1 class="govuk-heading-l">
+            You need to report your organisation details
+          </h1>
+
+          <p>Content goes here.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+{% endblock %}

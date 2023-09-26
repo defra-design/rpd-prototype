@@ -5,8 +5,12 @@
     "start": "govuk-prototype-kit start"
   },
   "dependencies": {
-    "@govuk-prototype-kit/common-templates": "1.1.1",
-    "govuk-frontend": "4.6.0",
-    "govuk-prototype-kit": "13.9.1"
+    "@govuk-prototype-kit/common-templates": "1.2.2",
+    "@govuk-prototype-kit/step-by-step": "2.2.2",
+    "@govuk-prototype-kit/task-list": "1.1.2",
+    "@x-govuk/govuk-prototype-components": "^2.0.2",
+    "govuk-frontend": "4.7.0",
+    "govuk-prototype-kit": "13.13.3",
+    "notifications-node-client": "7.0.3"
   }
 }

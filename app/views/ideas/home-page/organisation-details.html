@@ -1,0 +1,99 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Primary navigation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block header %}
+
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Report packaging data",
+    serviceUrl: "/",
+    classes: "govuk-header__container--full-width",
+    containerClasses: "govuk-width-container",
+    navigationClasses: "sign-out",
+    navigation: [{
+      href: "#",
+      text: "Sign out"
+    }]
+    })
+  }}
+  
+  {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    html: 'This is not a live service.',
+    classes: "govuk-width-container"
+  }) }}
+  
+{% endblock %}
+
+
+{% block main %}
+
+  {{ xGovukPrimaryNavigation({
+    visuallyHiddenTitle: "Site navigation",
+    items: 
+    [{
+      text: "Overview",
+      href: "./overview"
+    }, {
+      text: "Organisation details",
+      href: "./organisation-details",
+      current: true
+    }, {
+      text: "Packaging data",
+      href: "#"
+    }]
+  }) }}
+
+
+
+  
+
+  <div class="govuk-width-container">
+    <!-- {{ govukBackLink({
+      href: "javascript:window.history.back()"
+    }) }} -->
+
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds govuk-!-margin-top-2">
+          <form method="POST" action="./org-details/upload-file">
+
+            <div class="govuk-form-group">
+                <h1 class="govuk-heading-l">
+                    Report organisation details
+                </h1>
+
+                <h2 class="govuk-heading-m">Before you start</h2>
+                
+                <p class="govuk-body">Read the guidance on <a class="govuk-link govuk-link--no-visited-state" href="https://www.gov.uk/government/publications/organisation-details-how-to-create-your-file-for-extended-producer-responsibility-epr-for-packaging" target="_blank">how to create your organisation details files (opens in a new window)</a>. There are template documents you can use.</p>
+                
+                <p class="govuk-body">Upload the files and we’ll check everything is in the right format. Then you can submit them to the regulator.</p>
+
+
+                <h2 class="govuk-heading-m">Make sure you have all the files ready</h2>
+
+                <p class="govuk-body govuk-!-margin-bottom-6">Make sure you have the CSV files ready, including the brand and partner information if you need them. If you’re not sure, check the guidance. </p>
+
+            </div>
+
+            {{ govukButton({
+            text: "Continue"
+            })}}
+
+        </form>
+        </div>  
+      </div>
+    </main>
+  </div>
+{% endblock %}

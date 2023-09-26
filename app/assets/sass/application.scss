@@ -4,3 +4,17 @@
 // 
 
 // Add extra styles here
+
+.sign-out {
+    float: right;
+}
+
+.x-govuk-primary-navigation__list {
+    left: 0;
+    padding: 0;
+  }
+  
+  .x-govuk-primary-navigation__item {
+    padding: 0 0;
+    margin-right: govuk-spacing(4);
+  }

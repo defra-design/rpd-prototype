@@ -1,0 +1,474 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Internal and user-facing language - reference tables" %}
+
+
+{% block main %}
+  {{ xGovukMasthead({
+    classes: "x-govuk-masthead--large",
+    breadcrumbs: {
+      items: [{
+        href: "/",
+        text: "Home"
+      }]
+    },
+    title: {
+      text: pageName
+    },
+    description: {
+      text: "User-facing versions of EPR terms next to internal and policy language. Also includes data codes."
+    }
+  }) }}
+
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+      
+        <!-- HEADING -->
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+              <h2 class="govuk-heading-l">How to use</h2>
+
+              <p class="govuk-body">For all content that EPR users will see, use the user-facing version. These follow GOV.UK style and our user research findings.</p>
+            
+              <p class="govuk-body">For more detail about what words we use and why, check the <a href="./a-z.html">A to Z.</a></p>
+
+              
+            
+              
+          </div>
+        </div>
+
+        <!-- HEADING -->
+        <div class="govuk-grid-row govuk-!-margin-top-4">
+          <div class="govuk-grid-column-full">
+
+            <h2 class="govuk-heading-l">Tables</h2>
+
+            <h3 class="govuk-heading-m">Producer Type / Packaging activity</h3>
+            <table tabindex="0" class="govuk-table govuk-!-margin-bottom-8">
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                <th class="govuk-table__header">Internal language</th>
+                <th class="govuk-table__header">User-facing language</th>
+                <th class="govuk-table__header">Code for data upload</th>
+                </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Producer Type</td>
+                <td class="govuk-table__cell">Packaging activity</td>
+                <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Brand Owner</td>
+                <td class="govuk-table__cell">Supplied under your brand</td>
+                <td class="govuk-table__cell">SO</td>
+                </tr>
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Packer/Filler</td>
+                <td class="govuk-table__cell">Packed or filled as unbranded</td>
+                <td class="govuk-table__cell">PF</td>
+                </tr>
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Importer</td>
+                <td class="govuk-table__cell">Imported</td>
+                <td class="govuk-table__cell">IM</td>
+                </tr>
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Distributor</td>
+                <td class="govuk-table__cell">Supplied as empty</td>
+                <td class="govuk-table__cell">SE</td>
+                </tr>
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Service Provider</td>
+                <td class="govuk-table__cell">Hired or loaned</td>
+                <td class="govuk-table__cell">SP</td>
+                </tr>
+                <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Online Marketplace</td>
+                <td class="govuk-table__cell">Sold through an online marketplace you own</td>
+                <td class="govuk-table__cell">OM</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h3 class="govuk-heading-m">Packaging type</h3>
+            <table tabindex="0" class="govuk-table govuk-!-margin-bottom-8">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+              <th class="govuk-table__header">Internal language</th>
+              <th class="govuk-table__header">User-facing language</th>
+              <th class="govuk-table__header">Code for data upload</th>
+              </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Waste Offsetting</td>
+              <td class="govuk-table__cell">Self-managed consumer waste</td>
+              <td class="govuk-table__cell">CW</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Waste Backhauling</td>
+              <td class="govuk-table__cell">Self-managed organisation waste</td>
+              <td class="govuk-table__cell">OW</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Total EPR Packaging</td>
+              <td class="govuk-table__cell">Small organisation waste - all</td>
+              <td class="govuk-table__cell">SW</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Household</td>
+              <td class="govuk-table__cell">Household packaging</td>
+              <td class="govuk-table__cell">HH</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Non-Household</td>
+              <td class="govuk-table__cell">Non-household packaging</td>
+              <td class="govuk-table__cell">NH</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Re-usable Packaging</td>
+              <td class="govuk-table__cell">Reusable packaging</td>
+              <td class="govuk-table__cell">RU</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Street Bin / Commonly Littered</td>
+              <td class="govuk-table__cell">Commonly ends up in public bins</td>
+              <td class="govuk-table__cell">SB</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Re-usable Packaging</td>
+              <td class="govuk-table__cell">Reusable packaging</td>
+              <td class="govuk-table__cell">RU</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Drinks containers</td>
+              <td class="govuk-table__cell">Household drinks containers</td>
+              <td class="govuk-table__cell">HDC</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Drinks containers</td>
+              <td class="govuk-table__cell">Non-household drinks containers</td>
+              <td class="govuk-table__cell">NDC</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">N/A</td>
+              <td class="govuk-table__cell">Small organisation packaging - all</td>
+              <td class="govuk-table__cell">SP</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <h3 class="govuk-heading-m">Waste Sub-type / Packaging class</h3>
+            <table tabindex="0" class="govuk-table govuk-!-margin-bottom-8">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+              <th class="govuk-table__header">Internal language</th>
+              <th class="govuk-table__header">User-facing language</th>
+              <th class="govuk-table__header">Code for data upload</th>
+              </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Waste Sub-type</td>
+              <td class="govuk-table__cell">Packaging class</td>
+              <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Primary packaging</td>
+              <td class="govuk-table__cell">Primary packaging</td>
+              <td class="govuk-table__cell">P1</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Secondary packaging</td>
+              <td class="govuk-table__cell">Secondary packaging</td>
+              <td class="govuk-table__cell">P2</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Shipment packaging</td>
+              <td class="govuk-table__cell">Shipment packaging</td>
+              <td class="govuk-table__cell">P3</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Transit packaging</td>
+              <td class="govuk-table__cell">Tertiary packaging</td>
+              <td class="govuk-table__cell">P4</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Non-primary packaging</td>
+              <td class="govuk-table__cell">Non-primary reusable packaging</td>
+              <td class="govuk-table__cell">P5</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Total packaging</td>
+              <td class="govuk-table__cell">Online marketplace total</td>
+              <td class="govuk-table__cell">P6</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Total relevant waste</td>
+              <td class="govuk-table__cell">Self managed consumer waste - all</td>
+              <td class="govuk-table__cell">O1</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Waste origin</td>
+              <td class="govuk-table__cell">Organisation waste - origin</td>
+              <td class="govuk-table__cell">O2</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Waste transfer</td>
+              <td class="govuk-table__cell">Organisation waste - transferred</td>
+              <td class="govuk-table__cell">O3</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Street bin</td>
+              <td class="govuk-table__cell">Public bin</td>
+              <td class="govuk-table__cell">S1</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <h3 class="govuk-heading-m">Material Type / Packaging material</h3>
+            <p class="govuk-body">Individual packaging materials are unlikely to change internally vs externally, but are included here for reference.</p>
+            <table tabindex="0" class="govuk-table govuk-!-margin-bottom-8">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+              <th class="govuk-table__header">Internal language</th>
+              <th class="govuk-table__header">User-facing language</th>
+              <th class="govuk-table__header">Code for data upload</th>
+              </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Material Type</td>
+              <td class="govuk-table__cell">Packaging material</td>
+              <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Plastic</td>
+              <td class="govuk-table__cell">Plastic</td>
+              <td class="govuk-table__cell">PL</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Wood</td>
+              <td class="govuk-table__cell">Wood</td>
+              <td class="govuk-table__cell">WD</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Aluminium</td>
+              <td class="govuk-table__cell">Aluminium</td>
+              <td class="govuk-table__cell">AL</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Steel</td>
+              <td class="govuk-table__cell">Steel</td>
+              <td class="govuk-table__cell">ST</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Glass</td>
+              <td class="govuk-table__cell">Glass</td>
+              <td class="govuk-table__cell">GL</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Paper_card</td>
+              <td class="govuk-table__cell">Paper or card</td>
+              <td class="govuk-table__cell">PC</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Fibre_composite</td>
+              <td class="govuk-table__cell">Fibre composite</td>
+              <td class="govuk-table__cell">FC</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Other</td>
+              <td class="govuk-table__cell">Other</td>
+              <td class="govuk-table__cell">OT</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <h3 class="govuk-heading-m">Material Sub-type / Type of plastic</h3>
+            <p class="govuk-body">Only for use if the user chooses ‘Plastic’ for packaging material.</p>
+            <table tabindex="0" class="govuk-table govuk-!-margin-bottom-8">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+              <th class="govuk-table__header">Internal language</th>
+              <th class="govuk-table__header">User-facing language</th>
+              <th class="govuk-table__header">Code for data upload</th>
+              </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Material Sub-type</td>
+              <td class="govuk-table__cell">Type of plastic</td>
+              <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">PET</td>
+              <td class="govuk-table__cell">PET</td>
+              <td class="govuk-table__cell">01</td>
+              </tr>
+              </tbody>
+            </table>
+
+
+            <h3 class="govuk-heading-m">Material Sub-type / Other packaging material</h3>
+            <p class="govuk-body">Only for use if the user chooses ‘Other’ for packaging material.</p>
+            <table tabindex="0" class="govuk-table govuk-!-margin-bottom-8">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+              <th class="govuk-table__header">Internal language</th>
+              <th class="govuk-table__header">User-facing language</th>
+              <th class="govuk-table__header">Code for data upload</th>
+              </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Material Sub-type</td>
+              <td class="govuk-table__cell">Other packaging material</td>
+              <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Hemp</td>
+              <td class="govuk-table__cell">Hemp</td>
+              <td class="govuk-table__cell">01</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Jute</td>
+              <td class="govuk-table__cell">Jute</td>
+              <td class="govuk-table__cell">02</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Ribbon</td>
+              <td class="govuk-table__cell">Ribbon</td>
+              <td class="govuk-table__cell">03</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">String</td>
+              <td class="govuk-table__cell">String</td>
+              <td class="govuk-table__cell">04</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Cork</td>
+              <td class="govuk-table__cell">Cork</td>
+              <td class="govuk-table__cell">05</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Cloth</td>
+              <td class="govuk-table__cell">Cloth</td>
+              <td class="govuk-table__cell">06</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Nitrile</td>
+              <td class="govuk-table__cell">Nitrile</td>
+              <td class="govuk-table__cell">07</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Rubber</td>
+              <td class="govuk-table__cell">Rubber</td>
+              <td class="govuk-table__cell">08</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Silicone</td>
+              <td class="govuk-table__cell">Silicone</td>
+              <td class="govuk-table__cell">09</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Vermiculite</td>
+              <td class="govuk-table__cell">Vermiculite</td>
+              <td class="govuk-table__cell">10</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Wax</td>
+              <td class="govuk-table__cell">Wax</td>
+              <td class="govuk-table__cell">11</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Gel</td>
+              <td class="govuk-table__cell">Gel</td>
+              <td class="govuk-table__cell">12</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Banana Skins</td>
+              <td class="govuk-table__cell">Banana skins</td>
+              <td class="govuk-table__cell">13</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Hay/straw</td>
+              <td class="govuk-table__cell">Hay or straw</td>
+              <td class="govuk-table__cell">14</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Seaweed</td>
+              <td class="govuk-table__cell">Seaweed</td>
+              <td class="govuk-table__cell">15</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Mushroom Packaging</td>
+              <td class="govuk-table__cell">Mushroom packaging</td>
+              <td class="govuk-table__cell">16</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Potato Starch</td>
+              <td class="govuk-table__cell">Potato starch</td>
+              <td class="govuk-table__cell">17</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Corn Plastic</td>
+              <td class="govuk-table__cell">Corn plastic</td>
+              <td class="govuk-table__cell">18</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Bagasse</td>
+              <td class="govuk-table__cell">Bagasse</td>
+              <td class="govuk-table__cell">19</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Polyactic Acid</td>
+              <td class="govuk-table__cell">Polyactic acid</td>
+              <td class="govuk-table__cell">20</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Bamboo</td>
+              <td class="govuk-table__cell">Bamboo</td>
+              <td class="govuk-table__cell">21</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Flax Based Products</td>
+              <td class="govuk-table__cell">Flax based products</td>
+              <td class="govuk-table__cell">22</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Ceramic</td>
+              <td class="govuk-table__cell">Ceramic</td>
+              <td class="govuk-table__cell">23</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Copper</td>
+              <td class="govuk-table__cell">Copper</td>
+              <td class="govuk-table__cell">24</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Other Metal</td>
+              <td class="govuk-table__cell">Other metal</td>
+              <td class="govuk-table__cell">25</td>
+              </tr>
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Leaves/Organic materials</td>
+              <td class="govuk-table__cell">Leaves or organic materials</td>
+              <td class="govuk-table__cell">26</td>
+              </tr>
+              </tbody>
+            </table>
+              
+          </div>
+        </div>
+
+        
+    </main>
+  </div>
+
+
+{% endblock %}
+

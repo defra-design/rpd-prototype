@@ -1,43 +1,412 @@
 {% extends "layouts/main.html" %}
 
-{% block pageTitle %}
-  Masthead page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
+{% set pageName="A to Z" %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-    href: "javascript:window.history.back()"
-  }) }}
-{% endblock %}
 
 {% block main %}
   {{ xGovukMasthead({
     classes: "x-govuk-masthead--large",
-    phaseBanner: {
-      text: "This is a new service"
+    breadcrumbs: {
+      items: [{
+        href: "/",
+        text: "Home"
+      }]
     },
     title: {
-      text: "Page title"
+      text: pageName
     },
     description: {
-      text: "This is a paragraph of text. It gives some context for this page and wraps across several lines."
-    },
-    startButton: {
-      href: "#"
+      text: "A guide covering style, spelling and grammar conventions for extended producer responsibility (EPR) for packaging content."
     }
   }) }}
 
   <div class="govuk-width-container">
     <main class="govuk-main-wrapper" id="main-content" role="main">
-      <div class="govuk-grid-row">
+      
+        <!-- HEADING -->
+        <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          <h2 class="govuk-heading-m">
-            Page content heading
-          </h2>
+          
+            <p class="govuk-body">The aim of this guide is to make sure we’re consistent in the way we communicate with external users affected by extended producer responsibility (EPR) for packaging.</p>
+          
+            <p class="govuk-body">Users include:</p>
+          
+            <ul class="govuk-list govuk-list--bullet">
+          
+              <li>organisations that handle and supply packaging</li>
+          
+              <li>compliance schemes</li>
+          
+              <li>local authorities</li>
+          
+            </ul>
 
-          <p>Content goes here.</p>
+            <p class="govuk-body">If you’re designing for internal users, such as the environmental regulator, the guidance here won’t always be appropriate.</p>
+
+            <p class="govuk-body">This guide has been designed to complement the <a href="https://www.gov.uk/guidance/style-guide" class="govuk-link">GOV.UK style guide</a>, rather than to supersede it.</p>
+
+            <h2 class="govuk-heading-l">Who is this guide for?</h2>
+
+            <p class="govuk-body">Anyone who communicates with the user groups affected by EPR for packaging, using channels such as:</p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>GOV.UK</li>
+            <li>newsletters or emails</li>
+            <li>webinars</li>
+            </ul>
+
+            <h2 class="govuk-heading-l">What is this guide based on?</h2>
+
+            <p class="govuk-body">This guide is based on:</p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>best practice for <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk" class="govuk-link">writing for GOV.UK</a></li>
+            <li>user research done by the digital team</li>
+            </ul>
+            <p class="govuk-body">The digital team has tested different parts of the EPR for packaging service with users. This has given us a good insight into words and phrases that work well for most users.</p>
+            <p class="govuk-body">Sometimes we use language that is different from the language in the formal legislation. This is because we need to make sure we use words that the majority of our users will understand. This is common practice on GOV.UK.</p>
+            <p class="govuk-body">By making things as simple as possible, we make sure our users will be able to achieve their tasks easily. This could increase compliance rates and reduce queries and complaints.</p>
+            <p class="govuk-body">We work with subject matter experts to make sure that any content we publish is factually accurate.</p>
+
+            <h2 class="govuk-heading-l">How to use this guide</h2>
+    
+            <p class="govuk-body">You can search (using the ctrl and f keys) for words or phrases.</p>
+            <p class="govuk-body">If you’d like to add something to this style guide, or have a question or suggestion, contact senior content designers:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>caroline.vickers@defra.gov.uk</li>
+              <li>richard.furlong@kainos.com</li>
+            </ul>
+   
+            <h2 class="govuk-heading-l">A to Z</h2>
+
+            <h3 class="govuk-heading-m">A</h3>
+
+            <h4 class="govuk-heading-s">Acronyms and abbreviations</h4>
+            <p class="govuk-body">Follow the <a href="https://www.gov.uk/guidance/style-guide" class="govuk-link">GOV.UK style guide</a> for more general advice on acronyms and abbreviations.</p>
+            <p class="govuk-body">See ‘extended producer responsibility’ for more information about how to use the EPR acronym.</p>
+
+            <h4  class="govuk-heading-s">approved person</h4>
+            <p class="govuk-body">Lower case. Within the ‘report packaging data’ service, an approved person is someone who can submit data to the environmental regulator. We use this term for legal reasons.</p>
+            <p class="govuk-body">Explain what this phrase means when it’s first used in a transaction.</p>
+            <p class="govuk-body">See also ‘delegate’.</p>
+            
+            <h3 class="govuk-heading-m">B</h3>
+
+            <h4 class="govuk-heading-s">backhaul</h4>
+            <p class="govuk-body">See ‘self-managed waste’.</p>
+            <p class="govuk-body">Backhaul is known by some users, so it’s fine to use this term. Try to explain it when it’s used, as some less experienced users may not understand it.</p>
+
+            <h3 class="govuk-heading-m">C</h3>
+
+            <h4 class="govuk-heading-s">commonly ends up in public bins</h4>
+            <p class="govuk-body">Do you not use ‘street bin waste’ - this is not legally accurate.</p>
+            <p class="govuk-body">Do not use ‘commonly littered’.</p>
+            
+            <h4 class="govuk-heading-s">Companies House</h4>
+            <p class="govuk-body">Upper case.</p>
+
+            <h4 class="govuk-heading-s">compliance scheme</h4>
+            <p class="govuk-body">Lower case.</p>
+
+            <h3 class="govuk-heading-m">D</h3>
+
+            <h4 class="govuk-heading-s">Data</h4>
+            <p class="govuk-body">When we talk about the data users need to report, we explain it in the following way:</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">There should be 4 parts to the data you collect about your packaging. These are:</p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>packaging activity – this is how you supplied the packaging</li>
+            <li>packaging type – for example, if the packaging is household or non-household</li>
+            <li>packaging class - whether the packaging is primary, secondary, shipment or tertiary</li>
+            <li>packaging material and weight</li>
+            </ul>
+            </blockquote>
+            <p class="govuk-body">Don’t use the phrase ‘placed on the market’ - this is for internal use only. Instead say ‘packaging data’.</p>
+            <p class="govuk-body">See also: ‘nation data’</p>
+
+            <h4 class="govuk-heading-s">Defra</h4>
+            <p class="govuk-body">Some users aren’t aware of Defra’s role, so avoid referring to Defra unless necessary. Instead of ‘submit your data to Defra’ say ‘submit your data’.</p>
+            <p class="govuk-body">If you do have to mention it, use ‘Defra’ not ‘DEFRA’.</p>
+            
+            <h4 class="govuk-heading-s">delegate</h4>
+            <p class="govuk-body">Lower case. Within the ‘report packaging data’ service, a delegate is someone who can submit data to the environmental regulator on behalf of an ‘approved person’. We use this term for legal reasons.</p>
+            <p class="govuk-body">Explain what this word means when it’s first used in a transaction.</p>
+            <p class="govuk-body">See also ‘approved person’.</p>
+            
+            <h4 class="govuk-heading-s">Deposit Return Scheme (DRS)</h4>
+            <p class="govuk-body">Upper case.</p>
+            <p class="govuk-body">Write out in full the first time it’s used on a page, before using the ‘DRS’ acronym.</p>
+            
+            <h4 class="govuk-heading-s">direct producer</h4>
+            <p class="govuk-body">Don’t use ‘direct producer’ in any user-facing content. See ‘producer’ for more information.</p>
+            
+            <h4 class="govuk-heading-s">drinks containers</h4>
+            <p class="govuk-body">These are reported as either:</p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>‘household drinks containers’</li>
+            <li>‘non-household drinks containers’</li>
+            </ul>
+            <p class="govuk-body">In both cases make sure ‘drinks’ is plural.</p>
+            
+            <h3 class="govuk-heading-m">E</h3>
+
+            <h4 class="govuk-heading-s">Environment Agency</h4>
+            <p class="govuk-body">Upper case.</p>
+            <p class="govuk-body">Don’t use the acronym, always write out in full.</p>
+            
+            
+            <h4 class="govuk-heading-s">environmental regulator</h4>
+            <p class="govuk-body">Lower case.</p>
+            <p class="govuk-body">Say ‘environmental regulator’ instead of just ‘regulator’.</p>
+            
+            <h4 class="govuk-heading-s">extended producer responsibility</h4>
+            <p class="govuk-body">Lower case.</p>
+            <p class="govuk-body">More experienced users seem to understand and use the acronym ‘EPR’. In testing, some users found the acronym easier to read.</p>
+            <p class="govuk-body">‘EPR’ is also used on different industry websites, so may be a common search term.</p>
+            <p class="govuk-body">Always explain the acronym the first time it’s used on a page. For example: ‘extended producer responsibility (EPR)’.</p>
+            <p class="govuk-body">For a transaction that’s made up of more than one page, write out ‘extended producer responsibility’ in full on the first page, then use ‘EPR’ on all other pages.</p>
+            <p class="govuk-body">The EPR acronym is also used for Environmental Permitting Regulations. To avoid confusion, don’t use ‘EPR’ on its own. Instead say ‘EPR for packaging’.</p>
+            
+            <h3 class="govuk-heading-m">H</h3>
+
+            <h4 class="govuk-heading-s">household packaging</h4>
+            <p class="govuk-body">Lower case.</p>
+            <p class="govuk-body">Don’t say ‘household waste’.</p>
+            
+            <h3 class="govuk-heading-m">L</h3>
+
+            <h4 class="govuk-heading-s">large organisation</h4>
+            <p class="govuk-body">Don’t say ‘large producer’. This is a phrase that we should only use internally.</p>
+            <p class="govuk-body">For user-facing content, we refer to large producers as being a ‘large organisation’.</p>
+            
+            <h4 class="govuk-heading-s">local authority</h4>
+            <p class="govuk-body">Lower case.</p>
+            <p class="govuk-body">Use ‘local authority’ instead of ‘local council’. There’s evidence that the phrase ‘local authority’ is used more widely by people in industry and local government. This differs to the advice in the GOV.UK style guide, which is aimed more at the general public.</p>
+            <p class="govuk-body">Use capitals for the official name of a local authority. For example ‘Reading Borough Council’, ‘Warwick District Council’ and ‘Swanage Town Council’.</p>
+            
+            <h3 class="govuk-heading-m">N</h3>
+
+            <h4 class="govuk-heading-s">nation data</h4>
+            <p class="govuk-body">Lower case.</p>
+            <p class="govuk-body">Nation data is what we say when referring to the nation of sale obligation. For consistency, it’s important we use this phrase only and don’t use alternatives such as ‘nation of sale’ or ‘nation of reporting’ in user-facing content.</p>
+            <p class="govuk-body">To give a simple, high level explanation of nation data, we say:</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">Nation data is information about which nation in the UK packaging is supplied in and which nation in the UK packaging is discarded in.</p>
+            </blockquote>
+            <p class="govuk-body">To give a more detailed explaination of nation data, we say:</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">Nation data should show where in the UK you’ve supplied packaging to a person or business who’s gone on to discard it.</p>
+            <p class="govuk-body">Supplying packaging includes:</p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>selling</li>
+            <li>hiring</li>
+            <li>loaning</li>
+            <li>gifting</li>
+            </ul>
+            <p class="govuk-body">This also includes packaging that you’ve imported, emptied and then discarded.</p>
+            </blockquote>
+            
+            <h4 class="govuk-heading-s">Natural Resources Wales</h4>
+            <p class="govuk-body">Upper case.</p>
+            <p class="govuk-body">Don’t use the acronym, always write out in full.</p>
+            
+            <h4 class="govuk-heading-s">non-household packaging</h4>
+            <p class="govuk-body">Lower case and hyphenated.</p>
+            <p class="govuk-body">Don’t say ‘household waste’.</p>
+            
+            <h4 class="govuk-heading-s">Northern Ireland Environment Agency</h4>
+            <p class="govuk-body">Upper case.</p>
+            <p class="govuk-body">Don’t use the acronym, always write out in full.</p>
+            
+            <h3 class="govuk-heading-m">O</h3>
+
+            <h4 class="govuk-heading-s">Obligated</h4>
+            <p class="govuk-body">We try to avoid using the word ‘obligated’ where possible, as it isn’t Plain English. However, sometimes it’s unavoidable.</p>
+            <p class="govuk-body">Instead of referring to ‘obligated packaging’ you could call it ‘packaging that you’re responsible for’.</p>
+            <p class="govuk-body">Instead of saying ‘legally obligated’ you could use phrases such as:</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">affected by EPR for packaging</p>
+            </blockquote>
+            <p class="govuk-body">or</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">take action under EPR for packaging</p>
+            </blockquote>
+            
+            <h4 class="govuk-heading-s">offset</h4>
+            <p class="govuk-body">All one word. See ‘self-managed waste’.</p>
+
+            <h4 class="govuk-heading-s">online marketplace</h4>
+            <p class="govuk-body">Lower case. ‘Marketplace’ is all one word.</p>
+            
+            <h3 class="govuk-heading-m">P</h3>
+
+            <h4 class="govuk-heading-s">Packaging activities (producer types)</h4>
+            <p class="govuk-body">The packaging activities are how we refer to the way producers handle and supply packaging.</p>
+            <p class="govuk-body">It’s important that we don’t use the policy labels for the different actors (‘brand owner’, ‘distributor’ etc.) in user-facing content. This increases a user’s cognitive load, as they need to work out which actor category they fit into.</p>
+            
+            <h5 class="govuk-heading-s">The packaging activities for working out if you’re obligated</h5>
+            <p class="govuk-body">When users are working out if they are obligated or not, we ask them if they carry out any of the packaging activities.</p>
+            <p class="govuk-body">We say:</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">You may need to act if you do any of the following:</p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>supply packaged goods to the UK market under your own brand</li>
+            <li>package goods for another UK organisation</li>
+            <li>use tertiary or ‘transit packaging’ to protect goods during transport so they can be sold to UK consumers</li>
+            <li>import products in packaging</li>
+            <li>own an online marketplace</li>
+            <li>hire or loan out reusable packaging</li>
+            <li>sell empty packaging</li>
+            </ul>
+            </blockquote>
+
+            <h5 class="govuk-heading-s">The packaging activities for collecting data</h5>
+            <p class="govuk-body">When users are working out how to categorise their data, we refer to the packaging activities in a slightly different way. This is because users need to categorise their data in terms of how they placed packaging on the market. Because of this, we phrase the activities in the past tense.</p>
+            <p class="govuk-body">We say:</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">You need to tell us what your role was when you put the packaging on the market. You do this by breaking down your data into the different packaging activities. These are:</p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>sold under your brand</li>
+            <li>packed or filled as unbranded</li>
+            <li>imported</li>
+            <li>sold as empty packaging</li>
+            <li>hired or loaned</li>
+            <li>sold through an online marketplace that you own</li>
+            </ul>
+            </blockquote>
+            
+            <h4 class="govuk-heading-s">parent company</h4>
+            <p class="govuk-body">Use ‘parent company’ instead of ‘holding company’ or ‘holding group’.</p>
+            <p class="govuk-body">Parent companies are made up of subsidiary companies.</p>
+            
+            <h4 class="govuk-heading-s">polyethylene terephthalate (PET) plastic</h4>
+            <p class="govuk-body">Always write out in full and provide the acronym and some users know this type of plastic by its acronym.</p>
+
+            <h4 class="govuk-heading-s">PRNs and PERNs</h4>
+            <p class="govuk-body">Write out in full, in lower case, when used for the first time on a page.</p>
+            <p class="govuk-body">For example:</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">packaging waste recycling notes (PRNs)</p>
+            </blockquote>
+            <p class="govuk-body">and</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">packaging export recycling notes (PERNs)</p>
+            </blockquote>
+
+            <h4 class="govuk-heading-s">Producer</h4>
+            <p class="govuk-body">Avoid using the word ‘producer’ in user-facing content as a way of referring to organisations that are legally obligated.</p>
+            <p class="govuk-body">Although some users understand what is meant by the word producer, others find it confusing. There is evidence that more inexperienced users assume that a producer is an organisation that manufactures packaging.</p>
+            <p class="govuk-body">The word producer is used internally as an umbrella term that refers to a range of different users who are legally obligated by the EPR regulations.</p>
+            <p class="govuk-body">For small producer - see ‘small organisation’.</p>
+            <p class="govuk-body">For large producer - see ‘large organisation’.</p>
+            <p class="govuk-body">Avoid saying ‘direct producer’.</p>
+
+            <h3 class="govuk-heading-m">R</h3>
+
+            
+            <h4 class="govuk-heading-s">Registration/register for EPR</h4>
+            <p class="govuk-body">In the ‘report packaging data’ service, don’t use either of these. For users of this service it’s not a registration process as it is not a one-off journey and you do it alongside other tasks.</p>
+            <p class="govuk-body">Use ‘report organisation details’.</p>
+            <p class="govuk-body">Other services may use ‘registration’ where appropriate.</p>
+            
+            
+            <h4 class="govuk-heading-s">Regulations</h4>
+            <p class="govuk-body">Avoid saying ‘EPR regulations’ as the regulations technically fall under producer responsibility, rather than extended producer responsibility.</p>
+            <p class="govuk-body">Instead you could say:</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">Find out more about the EPR for packaging requirements</p>
+            </blockquote>
+            <p class="govuk-body">or</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">Find out if you’ll be impacted by EPR for packaging</p>
+            </blockquote>
+            <p class="govuk-body">It’s fine to use the word ‘regulations’ on its own.</p>
+            <p class="govuk-body">For example:</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">Find out if the regulations affect you</p>
+            </blockquote>
+
+            <h4 class="govuk-heading-s">Report packaging data</h4>
+            <p class="govuk-body">The name of the service that producers will use to comply with EPR for packaging.</p>
+            <p class="govuk-body">The service is made up of individual tasks including:</p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>‘check if you need to report packaging data’</li>
+            <li>‘register’ for this year</li>
+            <li>‘collect your packaging data’ - this is when the user gathers their packaging data (previously called ‘placed on the market’ data - do not use this)</li>
+            <li>‘submit your packaging data’ - this is when the user sends their packaging and nation of sale data files to the regulator</li>
+            <li>‘submit nation data’ - see the entry on ‘Nation data’ for details</li>
+            <li>‘pay your fees’</li>
+            </ul>
+            <p class="govuk-body">If referring to the service as a noun, use lower case and quotation marks. For example:</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">You’ve been invited to create an account for the ‘report packaging data’ service.</p>
+            </blockquote>
+
+            <h3 class="govuk-heading-m">S</h3>
+
+            <h4 class="govuk-heading-s">self-managed waste</h4>
+            <p class="govuk-body">Hyphenated.</p>
+            <p class="govuk-body">When we talk about self-managed waste, we talk about ‘self-managed consumer waste’ and ‘self-managed organisation waste’.</p>
+            <p class="govuk-body">To explain this, we say:</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">There are 2 types of self-managed waste:</p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>consumer waste – such as waste you collect through a front of store take-back scheme to offset your own waste</li>
+            <li>organisation waste – such as ‘backhauled’ waste</li>
+            </ul>
+            </blockquote>
+
+            <h4 class="govuk-heading-s">Scottish Environment Protection Agency</h4>
+            <p class="govuk-body">Upper case.</p>
+            <p class="govuk-body">Don’t use the acronym, always write out in full.</p>
+
+            <h4 class="govuk-heading-s">single-use</h4>
+            <p class="govuk-body">Hyphenated. As in ‘single-use drinks containers’.</p>
+
+            <h4 class="govuk-heading-s">small organisation</h4>
+            <p class="govuk-body">Don’t say ‘small producer’. This is a phrase that we should only use internally.</p>
+            <p class="govuk-body">For user-facing content, we refer to small producers as being a ‘small organisation’.</p>
+            
+            <h4 class="govuk-heading-s">supply or import</h4>
+            <p class="govuk-body">We use this phrase to refer generally to the sorts of organisations that are affected by EPR for packaging.</p>
+            <p class="govuk-body">For example:</p>
+            <blockquote class="govuk-inset-text govuk-!-margin-left-0">
+            <p class="govuk-body">Organisations that supply or import packaging and packaged goods may be affected by EPR for packaging.</p>
+            </blockquote>
+            <p class="govuk-body">When we’re talking specifically about legal obligation, say ‘supplies or imports, then empties and discards packaging’.</p>
+            <p class="govuk-body">Don’t say ‘organisations that work with packaging’ - this phrase did not perform well in testing.</p>
+            <p class="govuk-body">Don’t say ‘handle and supply’.</p>
+
+            <h3 class="govuk-heading-m">T</h3>
+
+            <h4 class="govuk-heading-s">takeaway</h4>
+            <p class="govuk-body">No hyphen. As in ‘these regulations apply to anyone who sells takeaway cups’.</p>
+            <p class="govuk-body">Remember to write as 2 words when using as a verb. For example: ‘Cups that you take away’.</p>
+
+            <h4 class="govuk-heading-s">take-back</h4>
+            <p class="govuk-body">Hyphenated. As in ‘front of store take-back scheme’.</p>
+
+            <h4 class="govuk-heading-s">tertiary packaging</h4>
+            <p class="govuk-body">Use ‘tertiary packaging’, not ‘transit packaging’.</p>
+            <p class="govuk-body">In some instances it can be useful to remind users that tertiary packaging is also known as transit packaging.</p>
+
+            <h3 class="govuk-heading-m">W</h3>
+
+            <h4 class="govuk-heading-s">Waste</h4>
+            <p class="govuk-body">For legal reasons we can’t refer to ‘household waste’ or ‘non-household waste’. So we have to say ‘household packaging’ and ‘non-household packaging’.</p>
+            
+            <h4 class="govuk-heading-s">waste management fee</h4>
+            <p class="govuk-body">Lower case.</p>
+            <p class="govuk-body">‘Waste management fee’ is what we say when referring to the waste cost obligation.</p>
+            
+            <h4 class="govuk-heading-s">Weight</h4>
+            <p class="govuk-body">Refer to weight, rather than ‘tonnage’. If necessary, clarify that weight should be provided to the nearest tonne or kilogram.</p>
+            <p class="govuk-body">Use ‘tonne’ and ‘kg’.</p>
+
         </div>
-      </div>
+        </div>
+
     </main>
   </div>
+
+
 {% endblock %}
+

@@ -2,9 +2,67 @@
 
 {% set pageName="Prototypes" %}
 
-{% block content %}
 
-<div class="govuk-grid-row">
+{% block main %}
+  {{ xGovukMasthead({
+    classes: "x-govuk-masthead--large",
+    title: {
+      text: serviceName
+    },
+    description: {
+      text: "A collection of prototypes and resources for the 'report packaging data' service."
+    }
+  }) }}
+
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+      
+        <!-- HEADING -->
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m">
+            Prototypes
+            </h2>
+        </div>
+        </div>
+
+        <!-- LINKS -->
+        <div class="govuk-grid-row ">
+            <div class="govuk-grid-column-one-half">
+                <h3 class="govuk-heading-m"><a class="govuk-link--no-visited-state" href="#">Report packaging data</a></h3>
+                <p>A service for producers and compliance schemes to report organisation details and packaging data to their respective regulator.</p>
+            </div>
+            <div class="govuk-grid-column-one-half">
+                <h3 class="govuk-heading-m"><a class="govuk-link--no-visited-state" href="#">pEPR: regulators' service</a></h3>
+                <p>A service for each of the 4 regulators to view, audit and manage organisation details and packaging data for producers and compliance schemes.</p>
+            </div>
+        </div>
+
+        <!-- HEADING -->
+        <div class="govuk-grid-row govuk-!-margin-top-4">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m">
+            Style guide
+            </h2>
+        </div>
+        </div>
+
+        <!-- LINKS -->
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+            <h3 class="govuk-heading-m"><a class="govuk-link--no-visited-state" href="./style-guide/a-z.html">A to Z</a></h3>
+            <p>A guide covering style, spelling and grammar conventions for extended producer responsibility (EPR) for packaging content.</p>
+        </div>
+
+        <div class="govuk-grid-column-one-half">
+            <h3 class="govuk-heading-m"><a class="govuk-link--no-visited-state" href="#">Internal and user-facing language – reference tables</a></h3>
+            <p>User-facing versions of EPR terms next to internal and policy language. Also includes data codes.</p>
+        </div>
+        </div>
+    </main>
+  </div>
+
+<!-- <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-l">
@@ -17,6 +75,7 @@
 
 
     </div>
-</div>
+</div> -->
 
 {% endblock %}
+

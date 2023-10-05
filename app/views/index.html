@@ -1,21 +1,21 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% set pageName="Prototypes" %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-        <h1 class="govuk-heading-xl">
-            {{ serviceName }}
+        <h1 class="govuk-heading-l">
+            {{ pageName }}
         </h1>
 
-        <p class="govuk-body">Test commit</p>
+        <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="./create-an-account/index.html">Create an account</a></p>
+        <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="./report-organisation-details/index.html">Report organisation details</a></p>
+        <p class="govuk-body"><a class="govuk-link govuk-link--no-visited-state" href="./report-packaging-data/index.html">Report packaging data</a></p>
 
-        <!-- {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %} -->
+
     </div>
 </div>
 

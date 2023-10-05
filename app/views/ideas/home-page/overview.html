@@ -26,13 +26,7 @@
     })
   }}
   
-  {{ govukPhaseBanner({
-    tag: {
-      text: "prototype"
-    },
-    html: 'This is not a live service.',
-    classes: "govuk-width-container"
-  }) }}
+  
   
 {% endblock %}
 
@@ -48,16 +42,20 @@
       current: true
     }, {
       text: "Organisation details",
-      href: "./organisation-details"
+      href: "#"
     }, {
       text: "Packaging data",
       href: "#"
     }]
   }) }}
 
-
-
-  
+  {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    html: 'This is not a live service.',
+    classes: "govuk-width-container"
+  }) }}
 
   <div class="govuk-width-container">
     <!-- {{ govukBackLink({

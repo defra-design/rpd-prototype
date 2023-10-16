@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/regulator-service/confirm-invite-route" method="post" novalidate>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">Who has been nominated as the new approved person
+  <div id="org-name-hint" class="govuk-hint"> You can invite an existing member of this account, or someone new.</div></h1></legend>
+  <div class="govuk-radios" data-module="govuk-radios">
+    <div class="govuk-radios__item"><input class="govuk-radios__input" id="confirmInvite" name="confirmInvite" type="radio" value="Adam Jones">
+      <label class="govuk-label govuk-radios__label" for="confirmInvite">Adam Jones</label></div>
+      <div class="govuk-radios__item"><input class="govuk-radios__input" id="confirmInvite" name="confirmInvite" type="radio" value="Kate Preston">
+        <label class="govuk-label govuk-radios__label" for="confirmInvite-2">Kate Preston</label></div>
+        <div class="govuk-radios__item"><input class="govuk-radios__input" id="confirmInvite" name="confirmInvite" type="radio" value="Kate Preston">
+          <label class="govuk-label govuk-radios__label" for="confirmInvite-3">Kate Preston</label></div>
+      <div class="govuk-radios__item"><input class="govuk-radios__input" id="confirmInvite" name="confirmInvite" type="radio" value="Someone else">
+        <label class="govuk-label govuk-radios__label" for="confirmInvite-4">Someone else</label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+<div class="govuk-button-group">
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+  
+</div>
+</form>
+</div>
+</div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds"><form action="regulator-search-results" method="post" novalidate>
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="org-name">
+          What is the name or ID of the organisation you want to manage?</label>
+  <div id="org-name-hint" class="govuk-hint">For example, Acme Org Ltd or 123 456</div></h1>
+  <input class="govuk-input govuk-input--width-30" id="org-name" name="org-name" type="text" autocomplete="org-name"></div>
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
+</div>
+</div>
+
+
+{% endblock %}

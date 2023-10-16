@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Account permissions have been changed",
+        html: ""
+      }) }}
+
+      <p class>
+        Sally Smith has been removed from the account. 
+
+<br>An invitation to apply to be an approved person has been sent to {{data['email-input']}}.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>
+        The nominated person will need to accept the invitation to apply.
+      </p>
+
+      <p>
+        After they have accepted and confirmed the invitation, the environmental regulator will have 28 days to review the request.
+
+The organisation will not be able to submit data until the environmental regulator has approved the request.
+      </p>
+      <p>
+        <a href="landing-page.html">
+          Go to home
+        </a> 
+      </p>
+
+
+    </div>
+  </div>
+
+{% endblock %}

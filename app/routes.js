@@ -7,3 +7,7 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
+
+router.use('/regulator-service', require('./views/regulator-service/_routes.js'));
+
+module.exports = router

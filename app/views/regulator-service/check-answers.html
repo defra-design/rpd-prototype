@@ -1,0 +1,91 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">
+        Check your details
+      </h1>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Remove approved person"
+            },
+            value: {
+              text: data['confirmRemove']
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "Remove approved person"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Approved person nominated"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "New approved person"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "New approved person"
+            },
+            value: {
+              text: data['confirmInvite']
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "New approved person"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+
+      <form action="/regulator-service/existing-confirmation-invitation" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Confirm"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

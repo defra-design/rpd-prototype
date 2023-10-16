@@ -1,0 +1,32 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="check-answers-removeinvite" method="post" novalidate>
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="org-name">
+          Enter the email address of the new approved person</label>
+  <div id="org-name-hint" class="govuk-hint">An email will be sent to them inviting them to apply. </div></h1>
+  <input class="govuk-input govuk-input--width-30" id="email-input" name="email-input" type="text" autocomplete="email-input" ></div>
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
+</div>
+</div>
+</main>
+
+{% endblock %}

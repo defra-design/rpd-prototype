@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Approved person removed",
+        html: ""
+      }) }}
+
+      <p>
+        Sally Smith has been removed as an approved person for Acme Org. 
+
+      </p>
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>
+        All members of the account are now basic users. The organisation can not submit data until an approved person has been added to the account.
+      </p>
+
+      <p>
+        An email has been sent to the organisation asking them to contact the environmental regulator to nominate a new approved person. 
+
+        The nominated person will then be invited to apply. The regulator will have 28 days to review their application.
+      </p>
+      <p>
+        <a href="org-details-AP-removed.html">
+          Go to organisation details
+        </a> 
+      </p>
+
+
+    </div>
+  </div>
+
+{% endblock %}
